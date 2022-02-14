@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<displays>
+<display id="fa5a7500-017e-1000-8002-c0a8008f60d4" type="" style="Table" enable="true">
+	<name><![CDATA[All Employees for a Department]]></name>
+	<description><![CDATA[All Employees for a Department]]></description>
+	<tooltip><![CDATA[]]></tooltip>
+	<drillclass><![CDATA[]]></drillclass>
+	<CustomValues>
+		<TYPE><![CDATA[horizontal]]></TYPE>
+	</CustomValues>
+	<query>
+		<sql><![CDATA[SELECT 
+EMPLOYEE_ID,
+EMPLOYEE_NAME
+FROM DEPARTMENT d
+INNER JOIN EMPLOYEES e ON
+d.DEPARTMENT_ID = e.DEPARTMENT_ID
+WHERE d.DEPARTMENT_ID = :DEPART_ID]]></sql>
+		<binds>
+			<bind id="DEPART_ID">
+				<prompt><![CDATA[DEPART_ID]]></prompt>
+				<tooltip><![CDATA[DEPART_ID]]></tooltip>
+				<value><![CDATA[1]]></value>
+				<bracket><![CDATA[null]]></bracket>
+			</bind>
+		</binds>
+	</query>
+</display>
+</displays>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<displays>
+<display id="fa613002-017e-1000-8008-c0a8008f60d4" type="" style="Table" enable="true">
+	<name><![CDATA[Employee Salary for a Department]]></name>
+	<description><![CDATA[Employee Salary for a Department]]></description>
+	<tooltip><![CDATA[]]></tooltip>
+	<drillclass><![CDATA[]]></drillclass>
+	<CustomValues>
+		<TYPE><![CDATA[horizontal]]></TYPE>
+	</CustomValues>
+	<query>
+		<sql><![CDATA[SELECT 
+d.DEPARTMENT_NAME,
+SUM(SALARY) TOTAL_SALARY
+FROM DEPARTMENT d
+INNER JOIN EMPLOYEES e ON
+d.DEPARTMENT_ID = e.DEPARTMENT_ID
+WHERE d.DEPARTMENT_ID = :DEPT_ID
+GROUP BY d.DEPARTMENT_NAME]]></sql>
+		<binds>
+			<bind id="DEPT_ID">
+				<prompt><![CDATA[DEPT_ID]]></prompt>
+				<tooltip><![CDATA[DEPT_ID]]></tooltip>
+				<value><![CDATA[1]]></value>
+				<bracket><![CDATA[null]]></bracket>
+			</bind>
+		</binds>
+	</query>
+</display>
+</displays>

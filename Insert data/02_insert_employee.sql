@@ -1,0 +1,11 @@
+INSERT INTO employees (employee_id,employee_name, job_title, date_hired, salary, department_id) VALUES ( SEQ_EMP_ID.nextval,'John Smith','CEO',date '1995-01-01',100000,1);
+INSERT INTO employees (employee_id,employee_name, job_title, date_hired, salary, department_id) VALUES ( SEQ_EMP_ID.nextval,'Jimmy Willis','Manager',date '2003-09-23',52500,4);
+INSERT INTO employees (employee_id,employee_name, job_title, date_hired, salary, department_id) VALUES ( SEQ_EMP_ID.nextval,'Roxy Jones','Salesperson ',date '2017-02-11',35000,4);
+INSERT INTO employees (employee_id,employee_name, job_title, date_hired, salary, department_id) VALUES ( SEQ_EMP_ID.nextval,'Selwyn Field','Salesperson',date '2020-05-20',32000,4);
+INSERT INTO employees (employee_id,employee_name, job_title, date_hired, salary, department_id) VALUES ( SEQ_EMP_ID.nextval,'David Hallett','Engineer',date '2018-04-17',40000,2);
+INSERT INTO employees (employee_id,employee_name, job_title, date_hired, salary, department_id) VALUES ( SEQ_EMP_ID.nextval,'Sarah Phelps','Manager',date '2015-03-21',45000,2);
+INSERT INTO employees (employee_id,employee_name, job_title, date_hired, salary, department_id) VALUES ( SEQ_EMP_ID.nextval,'Louise Harper','Engineer',date '2013-01-01',47000,2);
+INSERT INTO employees (employee_id,employee_name, job_title, date_hired, salary, department_id) VALUES ( SEQ_EMP_ID.nextval,'Tina Hart','Engineer',date '2014-07-28',45000,3);
+INSERT INTO employees (employee_id,employee_name, job_title, date_hired, salary, department_id) VALUES ( SEQ_EMP_ID.nextval,'Gus Jones','Manager',date '2018-05-15',50000,3);
+INSERT INTO employees (employee_id,employee_name, job_title, date_hired, salary, department_id) VALUES ( SEQ_EMP_ID.nextval,'Mildred Hall','Secretary',date '1996-10-12',35000,1);
+COMMIT;
