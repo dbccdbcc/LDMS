@@ -1,0 +1,45 @@
+DECLARE
+  P_EMP_ID NUMBER;
+  P_DEPT_ID NUMBER;
+BEGIN
+  P_EMP_ID := 90002;
+  P_DEPT_ID := 1;
+
+  PKG_EMPLOYEE.TRANSFER_DEPT(
+    P_EMP_ID => P_EMP_ID,
+    P_DEPT_ID => P_DEPT_ID
+  );
+--rollback;
+END;
+
+
+--with invalid P_DEPT_ID
+
+DECLARE
+  P_EMP_ID NUMBER;
+  P_DEPT_ID NUMBER;
+BEGIN
+  P_EMP_ID := 90002;
+  P_DEPT_ID := 2222;
+
+  PKG_EMPLOYEE.TRANSFER_DEPT(
+    P_EMP_ID => P_EMP_ID,
+    P_DEPT_ID => P_DEPT_ID
+  );
+--rollback;
+END;
+
+--with invalid P_EMP_ID
+DECLARE
+  P_EMP_ID NUMBER;
+  P_DEPT_ID NUMBER;
+BEGIN
+  P_EMP_ID := 50002;
+  P_DEPT_ID := 4;
+
+  PKG_EMPLOYEE.TRANSFER_DEPT(
+    P_EMP_ID => P_EMP_ID,
+    P_DEPT_ID => P_DEPT_ID
+  );
+--rollback;
+END;

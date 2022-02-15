@@ -1,0 +1,31 @@
+--increase salary
+DECLARE
+  P_EMP_ID NUMBER;
+  P_CHANGE NUMBER;
+BEGIN
+  P_EMP_ID := 90001;
+  P_CHANGE := 10;
+
+  PKG_EMPLOYEE.MODIFY_SALARY(
+    P_EMP_ID => P_EMP_ID,
+    P_CHANGE => P_CHANGE
+  );
+--rollback;
+END;
+
+
+--decrease salary
+
+DECLARE
+  P_EMP_ID NUMBER;
+  P_CHANGE NUMBER;
+BEGIN
+  P_EMP_ID := 90001;
+  P_CHANGE := -10;
+
+  PKG_EMPLOYEE.MODIFY_SALARY(
+    P_EMP_ID => P_EMP_ID,
+    P_CHANGE => P_CHANGE
+  );
+--rollback;
+END;
